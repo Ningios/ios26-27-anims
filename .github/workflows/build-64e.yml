@@ -60,7 +60,7 @@ jobs:
           dpkg-deb --contents "$deb" | grep -q './Library/PreferenceLoader/Preferences/iOS27AnimsRebornPrefs.plist'
           ! dpkg-deb --contents "$deb" | grep -q './var/jb/'
           python3 - "$deb" <<'PY'
-          import plistlib, struct, subprocess, sys, tarfile, io
+          import struct, subprocess, sys, tarfile, io
           p=sys.argv[1]
           raw=subprocess.check_output(['dpkg-deb','--fsys-tarfile',p])
           with tarfile.open(fileobj=io.BytesIO(raw),mode='r:*') as t:
@@ -68,16 +68,16 @@ jobs:
               for m in t.getmembers():
                   if not m.isfile(): continue
                   b=t.extractfile(m).read()
-                  if b[:4]==b'\xca\xfe\xba\xbe':
-                      magic,nfat=struct.unpack_from('>II',b,0)
-                      subs=[]; off=8
-                      for _ in range(nfat):
-                          cputype,subtype=struct.unpack_from('>II',b,off+4)
-                          subs.append(subtype & 0xffffffff); off+=20
-                      assert subs == [0x0,0x80000002] or set(subs)=={0x0,0x80000002}, (m.name,subs)
+                  if b[:4] == b'\xca\xfe\xba\xbe':
+                      _,nfat=struct.unpack_from('>II',b,0)
+                      assert nfat == 1, (m.name,nfat)
+                      cputype,subtype=struct.unpack_from('>II',b,12)
+                      assert cputype == 0x100000c and subtype == 0x80000002, (m.name,hex(cputype),hex(subtype))
                       bins.append(m.name)
-              assert len(bins)==2, bins
-          print('verified fat arm64/arm64e binaries:', bins)
+                  elif b[:4] in (b'\xcf\xfa\xed\xfe',b'\xfe\xed\xfa\xcf'):
+                      raise AssertionError('thin non-arm64e Mach-O: '+m.name)
+              assert len(bins) == 2, bins
+          print('verified thin arm64e binaries:', bins)
           PY
           shasum -a 256 "$deb"
 
