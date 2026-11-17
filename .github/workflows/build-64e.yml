@@ -3,6 +3,10 @@ name: build-reborn-64e
 on:
   workflow_dispatch:
 
+concurrency:
+  group: ios27-reborn-64e
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
@@ -63,19 +67,24 @@ jobs:
           import struct, subprocess, sys, tarfile, io
           p=sys.argv[1]
           raw=subprocess.check_output(['dpkg-deb','--fsys-tarfile',p])
+          def thin_arch(b):
+              if b[:4] == b'\\xcf\\xfa\\xed\\xfe':
+                  return struct.unpack_from('<II', b, 4)
+              if b[:4] == b'\\xfe\\xed\\xfa\\xcf':
+                  return struct.unpack_from('>II', b, 4)
+              return None
           with tarfile.open(fileobj=io.BytesIO(raw),mode='r:*') as t:
               bins=[]
               for m in t.getmembers():
                   if not m.isfile(): continue
                   b=t.extractfile(m).read()
-                  if b[:4] == b'\xca\xfe\xba\xbe':
-                      _,nfat=struct.unpack_from('>II',b,0)
-                      assert nfat == 1, (m.name,nfat)
-                      cputype,subtype=struct.unpack_from('>II',b,12)
+                  arch=thin_arch(b)
+                  if arch is not None:
+                      cputype, subtype = arch
                       assert cputype == 0x100000c and subtype == 0x80000002, (m.name,hex(cputype),hex(subtype))
                       bins.append(m.name)
-                  elif b[:4] in (b'\xcf\xfa\xed\xfe',b'\xfe\xed\xfa\xcf'):
-                      raise AssertionError('thin non-arm64e Mach-O: '+m.name)
+                  elif b[:4] in (b'\\xca\\xfe\\xba\\xbe', b'\\xbe\\xba\\xfe\\xca'):
+                      raise AssertionError('fat Mach-O is not allowed in the 64e package: '+m.name)
               assert len(bins) == 2, bins
           print('verified thin arm64e binaries:', bins)
           PY
