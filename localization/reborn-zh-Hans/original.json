@@ -1,0 +1,11 @@
+{
+  "package": "com.bazik1337.ios27animsreborn",
+  "original_version": "1.0.0~beta1",
+  "localized_version": "1.0.0~beta1+ningzh1",
+  "architecture": "iphoneos-arm64",
+  "layout": "var/jb rootless",
+  "asset_name": "com.bazik1337.ios27animsreborn_1.0.0.beta1_iphoneos-arm64.deb",
+  "asset_sha256": "5b5d92c5a61f6104f730cb93ded8ddba8f479e962c51aa504f75c36d3a2ec835",
+  "asset_bytes": 75898,
+  "url": "https://github.com/Ningios/ios26-27-anims/releases/download/reborn-v1.0.0-beta.1/com.bazik1337.ios27animsreborn_1.0.0.beta1_iphoneos-arm64.deb"
+}
