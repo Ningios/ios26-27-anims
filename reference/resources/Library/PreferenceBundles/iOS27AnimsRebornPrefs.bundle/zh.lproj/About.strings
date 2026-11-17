@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Settings apply immediately. Respring only if SpringBoard needs to be restarted.</key>
+	<string>设置立即生效。仅在需要重启桌面时注销。</string>
+	<key>Respring</key>
+	<string>注销桌面</string>
+	<key>System wallpaper zoom</key>
+	<string>系统壁纸缩放</string>
+	<key>Enabled</key>
+	<string>启用</string>
+	<key>Restore recommended settings?</key>
+	<string>恢复推荐设置？</string>
+	<key>Restore the recommended options and keep the tweak enabled state.</key>
+	<string>恢复推荐选项，保留当前的插件启用状态。</string>
+	<key>Reset</key>
+	<string>恢复</string>
+	<key>Opening and closing apps with the genie effect.</key>
+	<string>打开和关闭应用时使用神灯动画。</string>
+	<key>Transparent background</key>
+	<string>透明背景</string>
+	<key>Changes apply without a respring.</key>
+	<string>修改立即生效，无需注销。</string>
+	<key>Icon animations</key>
+	<string>图标动画</string>
+	<key>On: use your iOS wallpaper zoom. Off: keep the wallpaper still, as in iOS 27. Applies to app animations.</key>
+	<string>开启：使用系统壁纸缩放。关闭：壁纸保持静止，呈现 iOS 27 风格。仅作用于应用开关动画。</string>
+	<key>iOS 27 animations</key>
+	<string>iOS 27 动画</string>
+	<key>Cancel</key>
+	<string>取消</string>
+	<key>About</key>
+	<string>关于</string>
+	<key>Maintenance</key>
+	<string>维护</string>
+	<key>Author</key>
+	<string>作者</string>
+	<key>Telegram channel</key>
+	<string>Telegram 频道</string>
+	<key>Restore recommended settings</key>
+	<string>恢复推荐设置</string>
+	<key>Notification Center</key>
+	<string>通知中心</string>
+	<key>Apps</key>
+	<string>应用</string>
+</dict>
+</plist>

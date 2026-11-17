@@ -1,0 +1,89 @@
+name: build-reborn-64e
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Toolchain
+        run: |
+          set -euo pipefail
+          xcodebuild -version
+          xcrun --sdk iphoneos --show-sdk-path
+          python3 --version
+
+      - name: Install Theos and packaging tools
+        run: |
+          set -euo pipefail
+          brew install ldid dpkg fakeroot xz
+          git clone --depth 1 https://github.com/roothide/theos.git "$RUNNER_TEMP/theos"
+          git -C "$RUNNER_TEMP/theos" submodule update --init --recursive
+          echo "THEOS=$RUNNER_TEMP/theos" >> "$GITHUB_ENV"
+          echo "PATH=$RUNNER_TEMP/theos/bin:$PATH" >> "$GITHUB_ENV"
+
+      - name: Verify reconstructed source
+        run: |
+          set -euo pipefail
+          python3 tools/verify.py
+          test "$(grep -E '^export ARCHS = ' Makefile)" = "export ARCHS = arm64e"
+          grep -q '^export THEOS_PACKAGE_SCHEME = roothide$' Makefile
+          test "$(grep -E '^Architecture:' control | awk '{print $2}')" = iphoneos-arm64e
+
+      - name: Build one arm64e RootHide package
+        run: |
+          set -euo pipefail
+          make clean package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=roothide ARCHS=arm64e
+          mkdir -p dist
+          pkg="$(find packages -maxdepth 1 -type f -name '*iphoneos-arm64e.deb' -print -quit)"
+          test -n "$pkg"
+          cp "$pkg" dist/
+          test "$(find dist -maxdepth 1 -type f -name '*.deb' | wc -l | tr -d ' ')" = 1
+
+      - name: Verify package and arm64e slices
+        run: |
+          set -euo pipefail
+          deb="$(find dist -maxdepth 1 -type f -name '*.deb' -print -quit)"
+          dpkg-deb --info "$deb"
+          test "$(dpkg-deb --field "$deb" Architecture)" = iphoneos-arm64e
+          dpkg-deb --contents "$deb" | grep -q './Library/MobileSubstrate/DynamicLibraries/iOS27AnimsReborn.dylib'
+          dpkg-deb --contents "$deb" | grep -q './Library/PreferenceBundles/iOS27AnimsRebornPrefs.bundle/'
+          dpkg-deb --contents "$deb" | grep -q './Library/PreferenceLoader/Preferences/iOS27AnimsRebornPrefs.plist'
+          ! dpkg-deb --contents "$deb" | grep -q './var/jb/'
+          python3 - "$deb" <<'PY'
+          import plistlib, struct, subprocess, sys, tarfile, io
+          p=sys.argv[1]
+          raw=subprocess.check_output(['dpkg-deb','--fsys-tarfile',p])
+          with tarfile.open(fileobj=io.BytesIO(raw),mode='r:*') as t:
+              bins=[]
+              for m in t.getmembers():
+                  if not m.isfile(): continue
+                  b=t.extractfile(m).read()
+                  if b[:4]==b'\xca\xfe\xba\xbe':
+                      magic,nfat=struct.unpack_from('>II',b,0)
+                      subs=[]; off=8
+                      for _ in range(nfat):
+                          cputype,subtype=struct.unpack_from('>II',b,off+4)
+                          subs.append(subtype & 0xffffffff); off+=20
+                      assert subs == [0x0,0x80000002] or set(subs)=={0x0,0x80000002}, (m.name,subs)
+                      bins.append(m.name)
+              assert len(bins)==2, bins
+          print('verified fat arm64/arm64e binaries:', bins)
+          PY
+          shasum -a 256 "$deb"
+
+      - name: Upload one 64e package
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios27-reborn-zh-hans-64e
+          path: dist/*.deb
+          if-no-files-found: error

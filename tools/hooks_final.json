@@ -1,0 +1,248 @@
+[
+ {
+  "site": 47552,
+  "cls": "SBFluidSwitcherIconOverlayView",
+  "sel": "layoutSubviews",
+  "imp": 49404
+ },
+ {
+  "site": 47600,
+  "cls": "SBIconImageCrossfadeView",
+  "sel": "didMoveToSuperview",
+  "imp": 49472
+ },
+ {
+  "site": 47648,
+  "cls": "SBHomeGrabberView",
+  "sel": "setHidden:forReason:withAnimationSettings:",
+  "imp": 49536
+ },
+ {
+  "site": 47696,
+  "cls": "CALayer",
+  "sel": "setValue:forKey:",
+  "imp": 50020
+ },
+ {
+  "site": 47744,
+  "cls": "SBIconBadgeView",
+  "sel": "setAccessoryBrightness:",
+  "imp": 50208
+ },
+ {
+  "site": 47796,
+  "cls": "SBFullScreenToHomeIconZoomSwitcherModifier",
+  "sel": "layoutSettingsForTargetCenter:",
+  "imp": 50320
+ },
+ {
+  "site": 47836,
+  "cls": "SBFullScreenToHomeIconZoomSwitcherModifier",
+  "sel": "transitionWillBegin",
+  "imp": 50692
+ },
+ {
+  "site": 47876,
+  "cls": "SBFullScreenToHomeIconZoomSwitcherModifier",
+  "sel": "handleTimerEvent:",
+  "imp": 50880
+ },
+ {
+  "site": 47916,
+  "cls": "SBFullScreenToHomeIconZoomSwitcherModifier",
+  "sel": "cornerRadiiForIndex:",
+  "imp": 52900
+ },
+ {
+  "site": 47960,
+  "cls": "SBFullScreenToHomeIconZoomSwitcherModifier",
+  "sel": "animationAttributesForLayoutElement:",
+  "imp": 53500
+ },
+ {
+  "site": 48008,
+  "cls": "SBTransitionSwitcherModifier",
+  "sel": "transitionWillUpdate",
+  "imp": 53692
+ },
+ {
+  "site": 48060,
+  "cls": "SBGestureInitiatedIconZoomAnimationAttributesSwitcherModifier",
+  "sel": "initWithAppLayout:gestureEdge:liftOffVelocity:",
+  "imp": 55224
+ },
+ {
+  "site": 48096,
+  "cls": "SBGestureInitiatedIconZoomAnimationAttributesSwitcherModifier",
+  "sel": "animationAttributesForLayoutElement:",
+  "imp": 55292
+ },
+ {
+  "site": 48140,
+  "cls": "SBGestureInitiatedIconZoomAnimationAttributesSwitcherModifier",
+  "sel": "_layoutSettings",
+  "imp": 55448
+ },
+ {
+  "site": 48180,
+  "cls": "SBGestureInitiatedIconZoomAnimationAttributesSwitcherModifier",
+  "sel": "_positionSettings",
+  "imp": 55576
+ },
+ {
+  "site": 48220,
+  "cls": "SBGestureInitiatedIconZoomAnimationAttributesSwitcherModifier",
+  "sel": "_scaleSettings",
+  "imp": 55728
+ },
+ {
+  "site": 48260,
+  "cls": "SBGestureInitiatedIconZoomAnimationAttributesSwitcherModifier",
+  "sel": "_settingsByInterpolatingBetween:and:progress:",
+  "imp": 55880
+ },
+ {
+  "site": 48312,
+  "cls": "SBFluidSwitcherAnimationSettings",
+  "sel": "setDefaultValues",
+  "imp": 56416
+ },
+ {
+  "site": 48356,
+  "cls": "SBFullScreenToHomeCenterZoomDownSwitcherModifier",
+  "sel": "_layoutSettings",
+  "imp": 56480
+ },
+ {
+  "site": 48408,
+  "cls": "SBCoverSheetSlidingViewController",
+  "sel": "_presentGestureBeganWithGestureRecognizer:",
+  "imp": 56552
+ },
+ {
+  "site": 48448,
+  "cls": "SBCoverSheetSlidingViewController",
+  "sel": "_dismissGestureBeganWithGestureRecognizer:",
+  "imp": 56836
+ },
+ {
+  "site": 48488,
+  "cls": "SBCoverSheetSlidingViewController",
+  "sel": "_startCatchupAnimationWithDuration:completion:",
+  "imp": 57120
+ },
+ {
+  "site": 48536,
+  "cls": "CSCoverSheetTransitionsSettings",
+  "sel": "setDefaultValues",
+  "imp": 57400
+ },
+ {
+  "site": 48576,
+  "cls": "CSCoverSheetTransitionsSettings",
+  "sel": "sameWallpaperInitialTransitionSettings",
+  "imp": 57504
+ },
+ {
+  "site": 48616,
+  "cls": "CSCoverSheetTransitionsSettings",
+  "sel": "sameWallpaperSubsequentTransitionSettings",
+  "imp": 57576
+ },
+ {
+  "site": 48656,
+  "cls": "CSCoverSheetTransitionsSettings",
+  "sel": "differentWallpaperInitialTransitionSettings",
+  "imp": 57648
+ },
+ {
+  "site": 48696,
+  "cls": "CSCoverSheetTransitionsSettings",
+  "sel": "differentWallpaperSubsequentTransitionSettings",
+  "imp": 57720
+ },
+ {
+  "site": 48736,
+  "cls": "CSCoverSheetTransitionsSettings",
+  "sel": "overAppTransitionSettings",
+  "imp": 57792
+ },
+ {
+  "site": 48784,
+  "cls": "CSCoverSheetViewController",
+  "sel": "listMinY",
+  "imp": 57864
+ },
+ {
+  "site": 48832,
+  "cls": "CSCombinedListViewController",
+  "sel": "horizontalInsetMargin",
+  "imp": 57916
+ },
+ {
+  "site": 48880,
+  "cls": "CSCoverSheetTransitionSettings",
+  "sel": "iconsFlyIn",
+  "imp": 58124
+ },
+ {
+  "site": 48932,
+  "cls": "SBCoverSheetPresentationManager",
+  "sel": "coverSheetSlidingViewController:prepareForPresentationTransitionForUserGesture:",
+  "imp": 58216
+ },
+ {
+  "site": 48972,
+  "cls": "SBCoverSheetPresentationManager",
+  "sel": "coverSheetSlidingViewController:prepareForDismissalTransitionForReversingTransition:forUserGesture:",
+  "imp": 58304
+ },
+ {
+  "site": 49012,
+  "cls": "SBCoverSheetPresentationManager",
+  "sel": "coverSheetSlidingViewController:committingToEndPresented:",
+  "imp": 58468
+ },
+ {
+  "site": 49052,
+  "cls": "SBCoverSheetPresentationManager",
+  "sel": "coverSheetSlidingViewControllerDidEndTransition:",
+  "imp": 58728
+ },
+ {
+  "site": 49100,
+  "cls": "SBFluidSwitcherItemContainer",
+  "sel": "setBounds:",
+  "imp": 58900
+ },
+ {
+  "site": 49152,
+  "cls": "SBFluidSwitcherViewController",
+  "sel": "_itemContainerForAppLayoutIfExists:",
+  "imp": 59388
+ },
+ {
+  "site": 49192,
+  "cls": "SBFluidSwitcherViewController",
+  "sel": "_iconForWorkspaceEntity:",
+  "imp": 59524
+ },
+ {
+  "site": 49232,
+  "cls": "SBFluidSwitcherViewController",
+  "sel": "homeScreenIconCornerRadiusForAppLayout:",
+  "imp": 60684
+ },
+ {
+  "site": 49272,
+  "cls": "SBFluidSwitcherViewController",
+  "sel": "_performModifierMatchMoveToIconViewResponse:",
+  "imp": 61200
+ },
+ {
+  "site": 49312,
+  "cls": "SBFluidSwitcherViewController",
+  "sel": "_iconImageFrameForIconView:",
+  "imp": 61268
+ }
+]

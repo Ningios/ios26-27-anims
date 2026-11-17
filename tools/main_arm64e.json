@@ -1,0 +1,1744 @@
+{
+ "classes": [
+  {
+   "name": "CG27GenieDriver",
+   "address": 153592,
+   "ro": 150168,
+   "flags": 388,
+   "instance_start": 8,
+   "instance_size": 1296,
+   "superclass": "NSObject",
+   "methods": [
+    {
+     "name": "updateGlassRim",
+     "types": "v16@0:8",
+     "imp": 16384
+    },
+    {
+     "name": "ensureGlassRimAt:",
+     "types": "v24@0:8d16",
+     "imp": 17600
+    },
+    {
+     "name": "restoreMovingGrabbers",
+     "types": "v16@0:8",
+     "imp": 17692
+    },
+    {
+     "name": "start",
+     "types": "v16@0:8",
+     "imp": 18368
+    },
+    {
+     "name": "stop",
+     "types": "v16@0:8",
+     "imp": 18756
+    },
+    {
+     "name": "engine:xy:",
+     "types": "v32@0:8r^{?=[9[2d]][9[2d]][9[2d]][9d]ddddddddB}16^[2d]24",
+     "imp": 20676
+    },
+    {
+     "name": "meshForEngine:",
+     "types": "@24@0:8r^{?=[9[2d]][9[2d]][9[2d]][9d]ddddddddB}16",
+     "imp": 20976
+    },
+    {
+     "name": "applyMeshWithLead:at:frame:",
+     "types": "v40@0:8d16d24d32",
+     "imp": 21408
+    },
+    {
+     "name": "tick:",
+     "types": "v24@0:8@16",
+     "imp": 25756
+    },
+    {
+     "name": "meshIcons:",
+     "types": "v24@0:8@16",
+     "imp": 32924
+    },
+    {
+     "name": "deformAccessoryPoint:",
+     "types": "{CGPoint=dd}32@0:8{CGPoint=dd}16",
+     "imp": 33564
+    },
+    {
+     "name": "meshForIcon:",
+     "types": "@24@0:8@16",
+     "imp": 33712
+    },
+    {
+     "name": "makeBadgeCopy",
+     "types": "v16@0:8",
+     "imp": 34532
+    },
+    {
+     "name": "placeBadgeCopy",
+     "types": "v16@0:8",
+     "imp": 35328
+    },
+    {
+     "name": "advance:",
+     "types": "v24@0:8d16",
+     "imp": 36836
+    },
+    {
+     "name": "nativeLoadEngine:",
+     "types": "v20@0:8B16",
+     "imp": 38696
+    },
+    {
+     "name": "nativeSetUpWithContainer:targetActive:",
+     "types": "v28@0:8@16B24",
+     "imp": 39300
+    },
+    {
+     "name": "nativePerform:",
+     "types": "v20@0:8B16",
+     "imp": 40708
+    },
+    {
+     "name": "nativeBounds:of:",
+     "types": "v56@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16@48",
+     "imp": 41384
+    },
+    {
+     "name": "nativeUpdate:",
+     "types": "v20@0:8B16",
+     "imp": 42040
+    },
+    {
+     "name": "nativeSample:",
+     "types": "v24@0:8d16",
+     "imp": 43168
+    },
+    {
+     "name": "nativeStop",
+     "types": "v16@0:8",
+     "imp": 45544
+    },
+    {
+     "name": "finish",
+     "types": "v16@0:8",
+     "imp": 46244
+    },
+    {
+     "name": "native",
+     "types": "B16@0:8",
+     "imp": 46380
+    },
+    {
+     "name": "setNative:",
+     "types": "v20@0:8B16",
+     "imp": 46388
+    },
+    {
+     "name": "nativeActive",
+     "types": "B16@0:8",
+     "imp": 46396
+    },
+    {
+     "name": "setNativeActive:",
+     "types": "v20@0:8B16",
+     "imp": 46404
+    },
+    {
+     "name": "nativeMeshToken",
+     "types": "@16@0:8",
+     "imp": 46412
+    },
+    {
+     "name": "setNativeMeshToken:",
+     "types": "v24@0:8@16",
+     "imp": 46420
+    },
+    {
+     "name": "icon",
+     "types": "{CGRect={CGPoint=dd}{CGSize=dd}}16@0:8",
+     "imp": 46432
+    },
+    {
+     "name": "setIcon:",
+     "types": "v48@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16",
+     "imp": 46452
+    },
+    {
+     "name": "genieScale",
+     "types": "d16@0:8",
+     "imp": 46472
+    },
+    {
+     "name": "setGenieScale:",
+     "types": "v24@0:8d16",
+     "imp": 46480
+    },
+    {
+     "name": "response",
+     "types": "d16@0:8",
+     "imp": 46488
+    },
+    {
+     "name": "setResponse:",
+     "types": "v24@0:8d16",
+     "imp": 46496
+    },
+    {
+     "name": "zeta",
+     "types": "d16@0:8",
+     "imp": 46504
+    },
+    {
+     "name": "setZeta:",
+     "types": "v24@0:8d16",
+     "imp": 46512
+    },
+    {
+     "name": "layoutSettings",
+     "types": "@16@0:8",
+     "imp": 46520
+    },
+    {
+     "name": "setLayoutSettings:",
+     "types": "v24@0:8@16",
+     "imp": 46528
+    },
+    {
+     "name": "container",
+     "types": "@16@0:8",
+     "imp": 46540
+    },
+    {
+     "name": "setContainer:",
+     "types": "v24@0:8@16",
+     "imp": 46584
+    },
+    {
+     "name": "accessory",
+     "types": "@16@0:8",
+     "imp": 46596
+    },
+    {
+     "name": "setAccessory:",
+     "types": "v24@0:8@16",
+     "imp": 46640
+    },
+    {
+     "name": "accessorySearches",
+     "types": "i16@0:8",
+     "imp": 46652
+    },
+    {
+     "name": "setAccessorySearches:",
+     "types": "v20@0:8i16",
+     "imp": 46660
+    },
+    {
+     "name": "appLayout",
+     "types": "@16@0:8",
+     "imp": 46668
+    },
+    {
+     "name": "setAppLayout:",
+     "types": "v24@0:8@16",
+     "imp": 46676
+    },
+    {
+     "name": "startTime",
+     "types": "d16@0:8",
+     "imp": 46688
+    },
+    {
+     "name": "setStartTime:",
+     "types": "v24@0:8d16",
+     "imp": 46696
+    },
+    {
+     "name": "lastTime",
+     "types": "d16@0:8",
+     "imp": 46704
+    },
+    {
+     "name": "setLastTime:",
+     "types": "v24@0:8d16",
+     "imp": 46712
+    },
+    {
+     "name": "intensity",
+     "types": "d16@0:8",
+     "imp": 46720
+    },
+    {
+     "name": "setIntensity:",
+     "types": "v24@0:8d16",
+     "imp": 46728
+    },
+    {
+     "name": "sawLayout",
+     "types": "B16@0:8",
+     "imp": 46736
+    },
+    {
+     "name": "setSawLayout:",
+     "types": "v20@0:8B16",
+     "imp": 46744
+    },
+    {
+     "name": "renderedB",
+     "types": "d16@0:8",
+     "imp": 46752
+    },
+    {
+     "name": "setRenderedB:",
+     "types": "v24@0:8d16",
+     "imp": 46760
+    },
+    {
+     "name": "retargeted",
+     "types": "B16@0:8",
+     "imp": 46768
+    },
+    {
+     "name": "setRetargeted:",
+     "types": "v20@0:8B16",
+     "imp": 46776
+    },
+    {
+     "name": "accessoryOverflows",
+     "types": "B16@0:8",
+     "imp": 46784
+    },
+    {
+     "name": "setAccessoryOverflows:",
+     "types": "v20@0:8B16",
+     "imp": 46792
+    },
+    {
+     "name": "iconFits",
+     "types": "B16@0:8",
+     "imp": 46800
+    },
+    {
+     "name": "setIconFits:",
+     "types": "v20@0:8B16",
+     "imp": 46808
+    },
+    {
+     "name": "iconMeshViews",
+     "types": "@16@0:8",
+     "imp": 46816
+    },
+    {
+     "name": "setIconMeshViews:",
+     "types": "v24@0:8@16",
+     "imp": 46824
+    },
+    {
+     "name": "link",
+     "types": "@16@0:8",
+     "imp": 46836
+    },
+    {
+     "name": "setLink:",
+     "types": "v24@0:8@16",
+     "imp": 46844
+    },
+    {
+     "name": "owner",
+     "types": "@16@0:8",
+     "imp": 46856
+    },
+    {
+     "name": "setOwner:",
+     "types": "v24@0:8@16",
+     "imp": 46900
+    },
+    {
+     "name": "previousMesh",
+     "types": "@16@0:8",
+     "imp": 46912
+    },
+    {
+     "name": "setPreviousMesh:",
+     "types": "v24@0:8@16",
+     "imp": 46920
+    },
+    {
+     "name": "appliedMesh",
+     "types": "@16@0:8",
+     "imp": 46932
+    },
+    {
+     "name": "setAppliedMesh:",
+     "types": "v24@0:8@16",
+     "imp": 46940
+    },
+    {
+     "name": "openingShade",
+     "types": "@16@0:8",
+     "imp": 46952
+    },
+    {
+     "name": "setOpeningShade:",
+     "types": "v24@0:8@16",
+     "imp": 46960
+    },
+    {
+     "name": "shadeStartTime",
+     "types": "d16@0:8",
+     "imp": 46972
+    },
+    {
+     "name": "setShadeStartTime:",
+     "types": "v24@0:8d16",
+     "imp": 46980
+    },
+    {
+     "name": "glassRim",
+     "types": "@16@0:8",
+     "imp": 46988
+    },
+    {
+     "name": "setGlassRim:",
+     "types": "v24@0:8@16",
+     "imp": 46996
+    },
+    {
+     "name": "glassBeginTime",
+     "types": "d16@0:8",
+     "imp": 47008
+    },
+    {
+     "name": "setGlassBeginTime:",
+     "types": "v24@0:8d16",
+     "imp": 47016
+    },
+    {
+     "name": "grabbers",
+     "types": "@16@0:8",
+     "imp": 47024
+    },
+    {
+     "name": "setGrabbers:",
+     "types": "v24@0:8@16",
+     "imp": 47032
+    },
+    {
+     "name": "movingGrabbers",
+     "types": "@16@0:8",
+     "imp": 47044
+    },
+    {
+     "name": "setMovingGrabbers:",
+     "types": "v24@0:8@16",
+     "imp": 47052
+    },
+    {
+     "name": "movingGrabberToken",
+     "types": "@16@0:8",
+     "imp": 47064
+    },
+    {
+     "name": "setMovingGrabberToken:",
+     "types": "v24@0:8@16",
+     "imp": 47072
+    },
+    {
+     "name": "movingGrabberSearches",
+     "types": "Q16@0:8",
+     "imp": 47084
+    },
+    {
+     "name": "setMovingGrabberSearches:",
+     "types": "v24@0:8Q16",
+     "imp": 47092
+    },
+    {
+     "name": "badge",
+     "types": "@16@0:8",
+     "imp": 47100
+    },
+    {
+     "name": "setBadge:",
+     "types": "v24@0:8@16",
+     "imp": 47144
+    },
+    {
+     "name": "badgeCopy",
+     "types": "@16@0:8",
+     "imp": 47156
+    },
+    {
+     "name": "setBadgeCopy:",
+     "types": "v24@0:8@16",
+     "imp": 47164
+    },
+    {
+     "name": "badgeSearches",
+     "types": "i16@0:8",
+     "imp": 47176
+    },
+    {
+     "name": "setBadgeSearches:",
+     "types": "v20@0:8i16",
+     "imp": 47184
+    },
+    {
+     "name": "iconWidth",
+     "types": "d16@0:8",
+     "imp": 47192
+    },
+    {
+     "name": "setIconWidth:",
+     "types": "v24@0:8d16",
+     "imp": 47200
+    },
+    {
+     "name": "opening",
+     "types": "B16@0:8",
+     "imp": 47208
+    },
+    {
+     "name": "setOpening:",
+     "types": "v20@0:8B16",
+     "imp": 47216
+    },
+    {
+     "name": ".cxx_destruct",
+     "types": "v16@0:8",
+     "imp": 47224
+    }
+   ],
+   "class_methods": [],
+   "ivars": [
+    {
+     "name": "_engine",
+     "offset": 8,
+     "type": "{?=\"p\"[9[2d]]\"v\"[9[2d]]\"target\"[9[2d]]\"response\"[9d]\"b\"d\"bv\"d\"bTarget\"d\"bResponse\"d\"zeta\"d\"px\"d\"ms\"d\"gs\"d\"active\"B}",
+     "alignment": 3,
+     "size": 576
+    },
+    {
+     "name": "_shownXY",
+     "offset": 584,
+     "type": "[9[2d]]",
+     "alignment": 3,
+     "size": 144
+    },
+    {
+     "name": "_hasShownXY",
+     "offset": 728,
+     "type": "B",
+     "alignment": 0,
+     "size": 1
+    },
+    {
+     "name": "_nLock",
+     "offset": 732,
+     "type": "{os_unfair_lock_s=\"_os_unfair_lock_opaque\"I}",
+     "alignment": 2,
+     "size": 4
+    },
+    {
+     "name": "_nContainer",
+     "offset": 736,
+     "type": "@\"UIView\"",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_nAccessory",
+     "offset": 744,
+     "type": "@\"UIView\"",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_nProps",
+     "offset": 752,
+     "type": "@\"NSArray\"",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_nPx",
+     "offset": 760,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_nMs",
+     "offset": 768,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_nGs",
+     "offset": 776,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_nGain",
+     "offset": 784,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_nLive",
+     "offset": 792,
+     "type": "B",
+     "alignment": 0,
+     "size": 1
+    },
+    {
+     "name": "_nUpdating",
+     "offset": 796,
+     "type": "I",
+     "alignment": 2,
+     "size": 4
+    },
+    {
+     "name": "_nPrev",
+     "offset": 800,
+     "type": "[19d]",
+     "alignment": 3,
+     "size": 152
+    },
+    {
+     "name": "_nPrevTime",
+     "offset": 952,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_nCalls",
+     "offset": 960,
+     "type": "i",
+     "alignment": 2,
+     "size": 4
+    },
+    {
+     "name": "_nMainCalls",
+     "offset": 964,
+     "type": "i",
+     "alignment": 2,
+     "size": 4
+    },
+    {
+     "name": "_nLate",
+     "offset": 968,
+     "type": "i",
+     "alignment": 2,
+     "size": 4
+    },
+    {
+     "name": "_nCost",
+     "offset": 976,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_nMaxCost",
+     "offset": 984,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_nLastCall",
+     "offset": 992,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_nMaxGap",
+     "offset": 1000,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_nFirstCall",
+     "offset": 1008,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_nSuppressedModel",
+     "offset": 1016,
+     "type": "i",
+     "alignment": 2,
+     "size": 4
+    },
+    {
+     "name": "_nSuppressedPresentation",
+     "offset": 1020,
+     "type": "i",
+     "alignment": 2,
+     "size": 4
+    },
+    {
+     "name": "_native",
+     "offset": 1024,
+     "type": "B",
+     "alignment": 0,
+     "size": 1
+    },
+    {
+     "name": "_nativeActive",
+     "offset": 1025,
+     "type": "B",
+     "alignment": 0,
+     "size": 1
+    },
+    {
+     "name": "_sawLayout",
+     "offset": 1026,
+     "type": "B",
+     "alignment": 0,
+     "size": 1
+    },
+    {
+     "name": "_retargeted",
+     "offset": 1027,
+     "type": "B",
+     "alignment": 0,
+     "size": 1
+    },
+    {
+     "name": "_accessoryOverflows",
+     "offset": 1028,
+     "type": "B",
+     "alignment": 0,
+     "size": 1
+    },
+    {
+     "name": "_iconFits",
+     "offset": 1029,
+     "type": "B",
+     "alignment": 0,
+     "size": 1
+    },
+    {
+     "name": "_opening",
+     "offset": 1030,
+     "type": "B",
+     "alignment": 0,
+     "size": 1
+    },
+    {
+     "name": "_accessorySearches",
+     "offset": 1032,
+     "type": "i",
+     "alignment": 2,
+     "size": 4
+    },
+    {
+     "name": "_badgeSearches",
+     "offset": 1036,
+     "type": "i",
+     "alignment": 2,
+     "size": 4
+    },
+    {
+     "name": "_nativeMeshToken",
+     "offset": 1040,
+     "type": "@",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_genieScale",
+     "offset": 1048,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_response",
+     "offset": 1056,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_zeta",
+     "offset": 1064,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_layoutSettings",
+     "offset": 1072,
+     "type": "@",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_container",
+     "offset": 1080,
+     "type": "@\"UIView\"",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_accessory",
+     "offset": 1088,
+     "type": "@\"UIView\"",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_appLayout",
+     "offset": 1096,
+     "type": "@",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_startTime",
+     "offset": 1104,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_lastTime",
+     "offset": 1112,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_intensity",
+     "offset": 1120,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_renderedB",
+     "offset": 1128,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_iconMeshViews",
+     "offset": 1136,
+     "type": "@\"NSHashTable\"",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_link",
+     "offset": 1144,
+     "type": "@\"CADisplayLink\"",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_owner",
+     "offset": 1152,
+     "type": "@",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_previousMesh",
+     "offset": 1160,
+     "type": "@",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_appliedMesh",
+     "offset": 1168,
+     "type": "@",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_openingShade",
+     "offset": 1176,
+     "type": "@\"CALayer\"",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_shadeStartTime",
+     "offset": 1184,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_glassRim",
+     "offset": 1192,
+     "type": "@\"CALayer\"",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_glassBeginTime",
+     "offset": 1200,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_grabbers",
+     "offset": 1208,
+     "type": "@\"NSHashTable\"",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_movingGrabbers",
+     "offset": 1216,
+     "type": "@\"NSHashTable\"",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_movingGrabberToken",
+     "offset": 1224,
+     "type": "@",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_movingGrabberSearches",
+     "offset": 1232,
+     "type": "Q",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_badge",
+     "offset": 1240,
+     "type": "@\"UIView\"",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_badgeCopy",
+     "offset": 1248,
+     "type": "@\"UIView\"",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_iconWidth",
+     "offset": 1256,
+     "type": "d",
+     "alignment": 3,
+     "size": 8
+    },
+    {
+     "name": "_icon",
+     "offset": 1264,
+     "type": "{CGRect=\"origin\"{CGPoint=\"x\"d\"y\"d}\"size\"{CGSize=\"width\"d\"height\"d}}",
+     "alignment": 3,
+     "size": 32
+    }
+   ],
+   "properties": [
+    {
+     "name": "native",
+     "attributes": "TB,N,V_native"
+    },
+    {
+     "name": "nativeActive",
+     "attributes": "TB,N,V_nativeActive"
+    },
+    {
+     "name": "nativeMeshToken",
+     "attributes": "T@,&,N,V_nativeMeshToken"
+    },
+    {
+     "name": "icon",
+     "attributes": "T{CGRect={CGPoint=dd}{CGSize=dd}},N,V_icon"
+    },
+    {
+     "name": "genieScale",
+     "attributes": "Td,N,V_genieScale"
+    },
+    {
+     "name": "response",
+     "attributes": "Td,N,V_response"
+    },
+    {
+     "name": "zeta",
+     "attributes": "Td,N,V_zeta"
+    },
+    {
+     "name": "layoutSettings",
+     "attributes": "T@,&,N,V_layoutSettings"
+    },
+    {
+     "name": "container",
+     "attributes": "T@\"UIView\",W,N,V_container"
+    },
+    {
+     "name": "accessory",
+     "attributes": "T@\"UIView\",W,N,V_accessory"
+    },
+    {
+     "name": "accessorySearches",
+     "attributes": "Ti,N,V_accessorySearches"
+    },
+    {
+     "name": "appLayout",
+     "attributes": "T@,&,N,V_appLayout"
+    },
+    {
+     "name": "startTime",
+     "attributes": "Td,N,V_startTime"
+    },
+    {
+     "name": "lastTime",
+     "attributes": "Td,N,V_lastTime"
+    },
+    {
+     "name": "intensity",
+     "attributes": "Td,N,V_intensity"
+    },
+    {
+     "name": "sawLayout",
+     "attributes": "TB,N,V_sawLayout"
+    },
+    {
+     "name": "renderedB",
+     "attributes": "Td,N,V_renderedB"
+    },
+    {
+     "name": "retargeted",
+     "attributes": "TB,N,V_retargeted"
+    },
+    {
+     "name": "accessoryOverflows",
+     "attributes": "TB,N,V_accessoryOverflows"
+    },
+    {
+     "name": "iconFits",
+     "attributes": "TB,N,V_iconFits"
+    },
+    {
+     "name": "iconMeshViews",
+     "attributes": "T@\"NSHashTable\",&,N,V_iconMeshViews"
+    },
+    {
+     "name": "link",
+     "attributes": "T@\"CADisplayLink\",&,N,V_link"
+    },
+    {
+     "name": "owner",
+     "attributes": "T@,W,N,V_owner"
+    },
+    {
+     "name": "previousMesh",
+     "attributes": "T@,&,N,V_previousMesh"
+    },
+    {
+     "name": "appliedMesh",
+     "attributes": "T@,&,N,V_appliedMesh"
+    },
+    {
+     "name": "openingShade",
+     "attributes": "T@\"CALayer\",&,N,V_openingShade"
+    },
+    {
+     "name": "shadeStartTime",
+     "attributes": "Td,N,V_shadeStartTime"
+    },
+    {
+     "name": "glassRim",
+     "attributes": "T@\"CALayer\",&,N,V_glassRim"
+    },
+    {
+     "name": "glassBeginTime",
+     "attributes": "Td,N,V_glassBeginTime"
+    },
+    {
+     "name": "grabbers",
+     "attributes": "T@\"NSHashTable\",&,N,V_grabbers"
+    },
+    {
+     "name": "movingGrabbers",
+     "attributes": "T@\"NSHashTable\",&,N,V_movingGrabbers"
+    },
+    {
+     "name": "movingGrabberToken",
+     "attributes": "T@,&,N,V_movingGrabberToken"
+    },
+    {
+     "name": "movingGrabberSearches",
+     "attributes": "TQ,N,V_movingGrabberSearches"
+    },
+    {
+     "name": "badge",
+     "attributes": "T@\"UIView\",W,N,V_badge"
+    },
+    {
+     "name": "badgeCopy",
+     "attributes": "T@\"UIView\",&,N,V_badgeCopy"
+    },
+    {
+     "name": "badgeSearches",
+     "attributes": "Ti,N,V_badgeSearches"
+    },
+    {
+     "name": "iconWidth",
+     "attributes": "Td,N,V_iconWidth"
+    },
+    {
+     "name": "opening",
+     "attributes": "TB,N,V_opening"
+    }
+   ],
+   "protocols": []
+  }
+ ],
+ "categories": [],
+ "protocols": [],
+ "strings": [
+  "iOS27AnimsRebornCornerRadiusReset",
+  "iOS27AnimsRebornGrabberHide",
+  "FluidSwitcherHomeGrabberHideReason",
+  "CG27MovingGrabberOpacity",
+  "iOS27AnimsRebornMesh",
+  "i",
+  "meshTransform",
+  "SBAppSwitcherPageShadowView",
+  "SBHomeGrabberView",
+  "SBIconBadgeView",
+  "_transitionPhase",
+  "is18_transitionSnapshotView",
+  "v16@?0@\"UIGraphicsImageRendererContext\"8",
+  "v8@?0",
+  "opacity",
+  "iOS27AnimsRebornFlyIn",
+  "CG27FlyBlur",
+  "sameWallpaperInitialTransitionSettings",
+  "sameWallpaperSubsequentTransitionSettings",
+  "differentWallpaperInitialTransitionSettings",
+  "differentWallpaperSubsequentTransitionSettings",
+  "overAppTransitionSettings",
+  "com.bazik1337.ios27animsreborn/changed",
+  "SBFluidSwitcherIconOverlayView",
+  "SBIconImageCrossfadeView",
+  "CALayer",
+  "SBFullScreenToHomeIconZoomSwitcherModifier",
+  "SBTransitionSwitcherModifier",
+  "SBGestureInitiatedIconZoomAnimationAttributesSwitcherModifier",
+  "SBFluidSwitcherAnimationSettings",
+  "SBFullScreenToHomeCenterZoomDownSwitcherModifier",
+  "SBCoverSheetSlidingViewController",
+  "CSCoverSheetTransitionsSettings",
+  "CSCoverSheetViewController",
+  "CSCombinedListViewController",
+  "CSCoverSheetTransitionSettings",
+  "SBCoverSheetPresentationManager",
+  "SBFluidSwitcherItemContainer",
+  "SBFluidSwitcherViewController",
+  "AppAnimations",
+  "Enabled",
+  "com.bazik1337.ios27animsreborn",
+  "SBMainSwitcherViewController",
+  "SBFluidSwitcherSpaceOverlayAccessoryView",
+  "SBIconView",
+  "Badge",
+  "IconImage",
+  "CAMutableMeshTransform",
+  "UIViewFloatAnimatableProperty",
+  "SBFFluidBehaviorSettings",
+  "_direction",
+  "animationSettings",
+  "homeGestureTopRowZoomDownPositionSettings",
+  "SBFluidSwitcherSpaceUnderlayAccessoryView",
+  "_appLayout",
+  "cornerRadius",
+  "cg27.cornerReset",
+  "SBUpdateLayoutSwitcherEventResponse",
+  "SBSwitcherModifierEventResponse",
+  "_homeScreenIconFrame",
+  "{CGRect=",
+  "_iconGridSizeClass",
+  "SBAppLayout",
+  "B8@?0",
+  "SBTimerEventSwitcherEventResponse",
+  "_liftOffVelocity",
+  "ClearSheet",
+  "IconFlyIn",
+  "SBCoverSheetPrimarySlidingViewController",
+  "blursPanel",
+  "panelWallpaper",
+  "scaleWallpaper",
+  "fadesContent",
+  "darkensContent",
+  "trackingWallpaper",
+  "orientPanelWallpaper",
+  "fadePanelWallpaper",
+  "fadesCoverSheetContent",
+  "trackingWallpaperParallaxFactor",
+  "floatingLayerAsWallpaperOverlay",
+  "v32@?0@\"NSString\"8@16^B24",
+  "_accessibilityFrontMostApplication",
+  "SBIconController",
+  "SBDockView",
+  "B32@?0@8Q16^B24",
+  "name",
+  "layoutIfNeededForDockOffscreenFractionChanged",
+  "_viewVelocity",
+  "updateWallpaperAnimationWithIconFlyInTension:friction:",
+  "gaussianBlur",
+  "inputRadius",
+  "filters.CG27FlyBlur.inputRadius",
+  "position",
+  "zPosition",
+  "SBWallpaperController",
+  "isWidgetIcon",
+  "isFolderIcon",
+  "isWidgetStackIcon",
+  "Widget",
+  "Folder",
+  "CAFilter",
+  "position.y",
+  "_iconImageView",
+  ".",
+  "v32@?0@\"NSString\"8@\"NSNumber\"16^B24",
+  "TopRow",
+  "BottomRow",
+  "Layout",
+  "Position",
+  "Scale",
+  "homeGesture%@ZoomDown%@Settings",
+  "homeGestureTopRowZoomDownScaleSettings",
+  "homeGestureSmallWidgetZoomDownLayoutSettings",
+  "homeGestureSmallWidgetZoomDownPositionSettings",
+  "homeGestureSmallWidgetZoomDownScaleSettings",
+  "homeGestureMediumWidgetZoomDownLayoutSettings",
+  "homeGestureMediumWidgetZoomDownPositionSettings",
+  "homeGestureMediumWidgetZoomDownScaleSettings",
+  "homeGestureLargeWidgetZoomDownLayoutSettings",
+  "homeGestureLargeWidgetZoomDownPositionSettings",
+  "homeGestureLargeWidgetZoomDownScaleSettings",
+  "homeGestureCenterRowZoomUpSettings",
+  "homeGestureEdgeRowZoomUpSettings",
+  "homeScreenOpacitySettings",
+  "NativeWallpaperZoom",
+  "wallpaperScaleInApplication",
+  "crossblurDosidoSmallScale",
+  "siriSwipeDismissClientAnimationsDelay",
+  "dampingRatio",
+  ".dampingRatio",
+  "response",
+  ".response",
+  "retargetImpulse",
+  ".retargetImpulse",
+  "SBAppSwitcherDomain",
+  "TB,N,V_iconFits",
+  "CATransform3DValue",
+  "Td,N,V_response",
+  "CGPointValue",
+  "_glassBeginTime",
+  "T@\"CALayer\",&,N,V_glassRim",
+  "_movingGrabbers",
+  "T@\"NSHashTable\",&,N,V_grabbers",
+  "_nProps",
+  "T@\"NSHashTable\",&,N,V_movingGrabbers",
+  "_shadeStartTime",
+  "T@\"UIView\",W,N,V_accessory",
+  "containsString:",
+  "T@\"UIView\",W,N,V_container",
+  "displayLinkWithTarget:selector:",
+  "T@,&,N,V_appliedMesh",
+  "filters",
+  "T@,&,N,V_movingGrabberToken",
+  "initWithDelay:validator:reason:",
+  "T@,&,N,V_previousMesh",
+  "keyPath",
+  "TB,N,V_accessoryOverflows",
+  "nativeMeshToken",
+  "TB,N,V_nativeActive",
+  "opacity",
+  "TB,N,V_retargeted",
+  "retargetImpulse",
+  "TQ,N,V_movingGrabberSearches",
+  "setBorderWidth:",
+  "Td,N,V_glassBeginTime",
+  "toValue",
+  ".cxx_destruct",
+  "Td,N,V_lastTime",
+  "CGContext",
+  "_engine",
+  "T@\"CADisplayLink\",&,N,V_link",
+  "_layoutSettings",
+  "T@\"CALayer\",&,N,V_openingShade",
+  "_nCalls",
+  "T@\"NSHashTable\",&,N,V_iconMeshViews",
+  "_native",
+  "T@\"UIView\",&,N,V_badgeCopy",
+  "containsObject:",
+  "T@\"UIView\",W,N,V_badge",
+  "damping",
+  "T@,&,N,V_appLayout",
+  "filterWithType:",
+  "T@,&,N,V_layoutSettings",
+  "initWithBounds:",
+  "T@,&,N,V_nativeMeshToken",
+  "initialVelocity",
+  "T@,W,N,V_owner",
+  "minusHashTable:",
+  "TB,N,V_native",
+  "numberWithBool:",
+  "TB,N,V_opening",
+  "opening",
+  "TB,N,V_sawLayout",
+  "setAppliedMesh:",
+  "Td,N,V_genieScale",
+  "targetTimestamp",
+  "Td,N,V_iconWidth",
+  "Td,N,V_intensity",
+  "Td,N,V_renderedB",
+  "Td,N,V_shadeStartTime",
+  "Td,N,V_startTime",
+  "Td,N,V_zeta",
+  "Ti,N,V_accessorySearches",
+  "Ti,N,V_badgeSearches",
+  "T{CGRect={CGPoint=dd}{CGSize=dd}},N,V_icon",
+  "_accessory",
+  "_accessoryOverflows",
+  "_accessorySearches",
+  "_appLayout",
+  "_appliedMesh",
+  "_badge",
+  "_badgeCopy",
+  "_badgeSearches",
+  "_container",
+  "_createTransformerWithInputAnimatableProperties:modelValueSetter:presentationValueSetter:",
+  "_dismissGestureBeganWithGestureRecognizer:",
+  "_genieScale",
+  "_glassRim",
+  "_grabbers",
+  "_hasShownXY",
+  "_icon",
+  "_iconFits",
+  "_iconForWorkspaceEntity:",
+  "_iconImageFrameForIconView:",
+  "_iconMeshViews",
+  "_iconWidth",
+  "_intensity",
+  "_isInAnimationBlock",
+  "_isIndexZoomAppLayout:",
+  "_itemContainerForAppLayoutIfExists:",
+  "_lastTime",
+  "_link",
+  "_movingGrabberSearches",
+  "_movingGrabberToken",
+  "_nAccessory",
+  "_nContainer",
+  "_nCost",
+  "_nFirstCall",
+  "_nGain",
+  "_nGs",
+  "_nLastCall",
+  "_nLate",
+  "_nLive",
+  "_nLock",
+  "_nMainCalls",
+  "_nMaxCost",
+  "_nMaxGap",
+  "_nMs",
+  "_nPrev",
+  "_nPrevTime",
+  "_nPx",
+  "_nSuppressedModel",
+  "_nSuppressedPresentation",
+  "_nUpdating",
+  "_nativeActive",
+  "_nativeMeshToken",
+  "_normalizedHomeScreenIconZoomPercentBetweenTopAndBottom",
+  "_opening",
+  "_openingShade",
+  "_owner",
+  "_performModifierMatchMoveToIconViewResponse:",
+  "_positionSettings",
+  "_presentGestureBeganWithGestureRecognizer:",
+  "_previousMesh",
+  "_renderedB",
+  "_response",
+  "_retargeted",
+  "_sawLayout",
+  "_scaleSettings",
+  "_setPresentationValue:forKey:",
+  "_settingsByInterpolatingBetween:and:progress:",
+  "_shownXY",
+  "_startCatchupAnimationWithDuration:completion:",
+  "_startTime",
+  "_zeta",
+  "accessory",
+  "accessoryOverflows",
+  "accessorySearches",
+  "addAnimation:forKey:",
+  "addFace:",
+  "addObject:",
+  "addObjectsFromArray:",
+  "addSublayer:",
+  "addToRunLoop:forMode:",
+  "addVertex:",
+  "advance:",
+  "allObjects",
+  "alpha",
+  "animation",
+  "animationAttributesForLayoutElement:",
+  "animationForKey:",
+  "animationWithKeyPath:",
+  "animations",
+  "appLayout",
+  "appLayouts",
+  "appliedMesh",
+  "applyMeshWithLead:at:frame:",
+  "areAnimationsEnabled",
+  "array",
+  "arrayByAddingObject:",
+  "arrayWithObject:",
+  "arrayWithObjects:count:",
+  "badge",
+  "badgeCopy",
+  "badgeSearches",
+  "begin",
+  "beginModifyingDockOffscreenFractionForReason:",
+  "beginTime",
+  "boolValue",
+  "bounds",
+  "commit",
+  "container",
+  "contentViewController",
+  "contentsScale",
+  "convertPoint:fromView:",
+  "convertPoint:toLayer:",
+  "convertPoint:toView:",
+  "convertRect:toLayer:",
+  "convertRect:toView:",
+  "convertTime:fromLayer:",
+  "copy",
+  "cornerRadiiForIndex:",
+  "cornerRadius",
+  "cornerRadiusSettings",
+  "count",
+  "countByEnumeratingWithState:objects:count:",
+  "coverSheetSlidingViewController:committingToEndPresented:",
+  "coverSheetSlidingViewController:prepareForDismissalTransitionForReversingTransition:forUserGesture:",
+  "coverSheetSlidingViewController:prepareForPresentationTransitionForUserGesture:",
+  "coverSheetSlidingViewControllerDidEndTransition:",
+  "currentDevice",
+  "currentIconListView",
+  "dampingRatio",
+  "deformAccessoryPoint:",
+  "deviceApplicationSceneEntity",
+  "dictionary",
+  "didMoveToSuperview",
+  "differentWallpaperInitialTransitionSettings",
+  "differentWallpaperSubsequentTransitionSettings",
+  "dockListView",
+  "doubleValue",
+  "duration",
+  "engine:xy:",
+  "ensureGlassRimAt:",
+  "enumerateKeysAndObjectsUsingBlock:",
+  "finish",
+  "frameForIndex:",
+  "frameRateRange",
+  "fromValue",
+  "functionWithName:",
+  "genieScale",
+  "glassBeginTime",
+  "glassRim",
+  "grabbers",
+  "gridSizeClass",
+  "handleTimerEvent:",
+  "highFrameRateReason",
+  "homeScreenIconCornerRadiusForAppLayout:",
+  "homeScreenIconGridSizeClassForAppLayout:",
+  "horizontalInsetMargin",
+  "icon",
+  "iconFits",
+  "iconImageFrame",
+  "iconManager",
+  "iconMeshViews",
+  "iconViewForAppLayout:",
+  "iconWidth",
+  "iconsFlyIn",
+  "imageWithActions:",
+  "indexesOfObjectsPassingTest:",
+  "initWithAppLayout:gestureEdge:liftOffVelocity:",
+  "initWithDefaultValues",
+  "initWithImage:",
+  "initWithOptions:updateMode:",
+  "insertSubview:aboveSubview:",
+  "instancesRespondToSelector:",
+  "intensity",
+  "invalidate",
+  "isDeviceApplicationSceneEntity",
+  "isEqual:",
+  "isEqualToString:",
+  "isHidden",
+  "isMainThread",
+  "isPresented",
+  "isWidgetIcon",
+  "lastActivationIconLeafIdentifier",
+  "lastObject",
+  "lastTime",
+  "lastTouchLocation",
+  "layer",
+  "layoutIfNeeded",
+  "layoutSettings",
+  "layoutSettingsForTargetCenter:",
+  "layoutSubviews",
+  "leafIdentifier",
+  "length",
+  "link",
+  "listMinY",
+  "mainRunLoop",
+  "mainScreen",
+  "makeBadgeCopy",
+  "mask",
+  "mass",
+  "meshForEngine:",
+  "meshForIcon:",
+  "meshIcons:",
+  "meshTransform",
+  "movingGrabberSearches",
+  "movingGrabberToken",
+  "movingGrabbers",
+  "mutableCopy",
+  "mutableCopyWithZone:",
+  "native",
+  "nativeActive",
+  "nativeBounds:of:",
+  "nativeLoadEngine:",
+  "nativePerform:",
+  "nativeSample:",
+  "nativeSetUpWithContainer:targetActive:",
+  "nativeStop",
+  "nativeUpdate:",
+  "numberWithDouble:",
+  "numberWithInt:",
+  "objectAtIndexedSubscript:",
+  "objectForActivationSetting:",
+  "objectForKey:",
+  "objectForKeyedSubscript:",
+  "openingShade",
+  "overAppTransitionSettings",
+  "owner",
+  "performWithoutAnimation:",
+  "placeBadgeCopy",
+  "position",
+  "presentationLayer",
+  "presentationValue",
+  "previousMesh",
+  "progressProperty",
+  "prominentBaselineToListY",
+  "rangeOfString:",
+  "rasterizationScale",
+  "reason",
+  "removeAllObjects",
+  "removeAnimationForKey:",
+  "removeFromSuperlayer",
+  "removeFromSuperview",
+  "removeLastObject",
+  "removeObject:",
+  "removeObjectIdenticalTo:",
+  "removeObjectsAtIndexes:",
+  "renderInContext:",
+  "renderedB",
+  "response",
+  "responseByAppendingResponse:toResponse:",
+  "restoreMovingGrabbers",
+  "retargeted",
+  "rootFolderController",
+  "rootSettings",
+  "sameWallpaperInitialTransitionSettings",
+  "sameWallpaperSubsequentTransitionSettings",
+  "sawLayout",
+  "sb_animateWithSettings:mode:animations:completion:",
+  "scale",
+  "sceneHandle",
+  "setAccessory:",
+  "setAccessoryBrightness:",
+  "setAccessoryOverflows:",
+  "setAccessorySearches:",
+  "setAdditive:",
+  "setAnimations:",
+  "setAppLayout:",
+  "setBadge:",
+  "setBadgeCopy:",
+  "setBadgeSearches:",
+  "setBeginTime:",
+  "setBounds:",
+  "setCalculationMode:",
+  "setContainer:",
+  "setContentCornerRadii:",
+  "setContentsScale:",
+  "setCornerRadius:",
+  "setCornerRadiusSettings:",
+  "setCornerRadiusUpdateMode:",
+  "setDamping:",
+  "setDampingRatio:",
+  "setDefaultValues",
+  "setDisableActions:",
+  "setDockOffscreenFraction:",
+  "setDuration:",
+  "setFillMode:",
+  "setFilters:",
+  "setFrame:",
+  "setFrameRateRange:highFrameRateReason:",
+  "setFromValue:",
+  "setGenieScale:",
+  "setGlassBeginTime:",
+  "setGlassRim:",
+  "setGrabbers:",
+  "setHidden:forReason:withAnimationSettings:",
+  "setHighFrameRateReason:",
+  "setIcon:",
+  "setIconFits:",
+  "setIconMeshViews:",
+  "setIconWidth:",
+  "setInitialVelocity:",
+  "setIntensity:",
+  "setKeyTimes:",
+  "setLastTime:",
+  "setLastTouchLocation:",
+  "setLayoutSettings:",
+  "setLink:",
+  "setMass:",
+  "setMeshTransform:",
+  "setMovingGrabberSearches:",
+  "setMovingGrabberToken:",
+  "setMovingGrabbers:",
+  "setNative:",
+  "setNativeActive:",
+  "setNativeMeshToken:",
+  "setObject:forKey:",
+  "setObject:forKeyedSubscript:",
+  "setOpacity:",
+  "setOpening:",
+  "setOpeningShade:",
+  "setOwner:",
+  "setPosition:",
+  "setPreferredFrameRateRange:",
+  "setPreviousMesh:",
+  "setRasterizationScale:",
+  "setRemovedOnCompletion:",
+  "setRenderedB:",
+  "setResponse:",
+  "setRetargetImpulse:",
+  "setRetargeted:",
+  "setSawLayout:",
+  "setShadeStartTime:",
+  "setSpeed:",
+  "setStartTime:",
+  "setStiffness:",
+  "setSubdivisionSteps:",
+  "setSublayerTransform:",
+  "setTimingFunction:",
+  "setToValue:",
+  "setTransform:",
+  "setUserInteractionEnabled:",
+  "setValue:",
+  "setValue:forKey:",
+  "setValues:",
+  "setWithArray:",
+  "setZeta:",
+  "settlingDuration",
+  "shadeStartTime",
+  "sharedApplication",
+  "sharedInstance",
+  "speed",
+  "start",
+  "startTime",
+  "stiffness",
+  "stop",
+  "stopSettingPresentationValueForKey:",
+  "stringByAppendingString:",
+  "stringWithFormat:",
+  "strongToStrongObjectsMapTable",
+  "sublayerTransform",
+  "sublayers",
+  "substringFromIndex:",
+  "substringToIndex:",
+  "subviews",
+  "superlayer",
+  "superview",
+  "switcherSettings",
+  "tick:",
+  "timeLabelBaselineY",
+  "timeOffset",
+  "timestamp",
+  "transform",
+  "transitionWillBegin",
+  "transitionWillUpdate",
+  "updateGlassRim",
+  "userInterfaceIdiom",
+  "value",
+  "valueForKey:",
+  "valueWithCATransform3D:",
+  "valueWithCGPoint:",
+  "view",
+  "weakObjectsHashTable",
+  "window",
+  "zPosition",
+  "zeta",
+  "CG27GenieDriver",
+  "v16@0:8",
+  "v24@0:8d16",
+  "v32@0:8r^{?=[9[2d]][9[2d]][9[2d]][9d]ddddddddB}16^[2d]24",
+  "@24@0:8r^{?=[9[2d]][9[2d]][9[2d]][9d]ddddddddB}16",
+  "v40@0:8d16d24d32",
+  "v24@0:8@16",
+  "{CGPoint=dd}32@0:8{CGPoint=dd}16",
+  "@24@0:8@16",
+  "v20@0:8B16",
+  "v28@0:8@16B24",
+  "v56@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16@48",
+  "B16@0:8",
+  "@16@0:8",
+  "{CGRect={CGPoint=dd}{CGSize=dd}}16@0:8",
+  "v48@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16",
+  "d16@0:8",
+  "i16@0:8",
+  "v20@0:8i16",
+  "Q16@0:8",
+  "v24@0:8Q16",
+  "{?=\"p\"[9[2d]]\"v\"[9[2d]]\"target\"[9[2d]]\"response\"[9d]\"b\"d\"bv\"d\"bTarget\"d\"bResponse\"d\"zeta\"d\"px\"d\"ms\"d\"gs\"d\"active\"B}",
+  "[9[2d]]",
+  "B",
+  "{os_unfair_lock_s=\"_os_unfair_lock_opaque\"I}",
+  "@\"UIView\"",
+  "@\"NSArray\"",
+  "d",
+  "I",
+  "[19d]",
+  "i",
+  "@",
+  "@\"NSHashTable\"",
+  "@\"CADisplayLink\"",
+  "@\"CALayer\"",
+  "Q",
+  "{CGRect=\"origin\"{CGPoint=\"x\"d\"y\"d}\"size\"{CGSize=\"width\"d\"height\"d}}"
+ ],
+ "cfstrings": []
+}

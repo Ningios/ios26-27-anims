@@ -1,0 +1,230 @@
+{
+ "classes": [
+  {
+   "name": "CG27RebornPageController",
+   "address": 50304,
+   "ro": 49224,
+   "flags": 128,
+   "instance_start": 16,
+   "instance_size": 16,
+   "superclass": "PSListController",
+   "methods": [
+    {
+     "name": "specifiers",
+     "types": "ler",
+     "imp": 16376
+    },
+    {
+     "name": "viewDidLoad",
+     "types": "0:8",
+     "imp": 17636
+    },
+    {
+     "name": "viewWillAppear:",
+     "types": "0:8",
+     "imp": 18024
+    },
+    {
+     "name": "viewWillDisappear:",
+     "types": "0:8",
+     "imp": 18220
+    },
+    {
+     "name": "tableView:cellForRowAtIndexPath:",
+     "types": "B16",
+     "imp": 18348
+    }
+   ],
+   "class_methods": [],
+   "ivars": [],
+   "properties": [],
+   "protocols": []
+  },
+  {
+   "name": "CG27RebornRootListController",
+   "address": 50384,
+   "ro": 49368,
+   "flags": 128,
+   "instance_start": 16,
+   "instance_size": 16,
+   "superclass": "CG27RebornPageController",
+   "methods": [
+    {
+     "name": "viewDidLoad",
+     "types": "0:8",
+     "imp": 18636
+    },
+    {
+     "name": "resetSettings",
+     "types": "0:8",
+     "imp": 19584
+    },
+    {
+     "name": "performReset",
+     "types": "0:8",
+     "imp": 20196
+    }
+   ],
+   "class_methods": [],
+   "ivars": [],
+   "properties": [],
+   "protocols": []
+  },
+  {
+   "name": "CG27RebornAboutController",
+   "address": 50504,
+   "ro": 49512,
+   "flags": 128,
+   "instance_start": 16,
+   "instance_size": 16,
+   "superclass": "CG27RebornPageController",
+   "methods": [
+    {
+     "name": "respring",
+     "types": "0:8",
+     "imp": 20616
+    },
+    {
+     "name": "open:",
+     "types": "@24",
+     "imp": 20980
+    },
+    {
+     "name": "openTelegram",
+     "types": "0:8",
+     "imp": 21144
+    },
+    {
+     "name": "openChannel",
+     "types": "0:8",
+     "imp": 21156
+    },
+    {
+     "name": "openGitHub",
+     "types": "0:8",
+     "imp": 21168
+    }
+   ],
+   "class_methods": [],
+   "ivars": [],
+   "properties": [],
+   "protocols": []
+  }
+ ],
+ "categories": [],
+ "protocols": [],
+ "strings": [
+  "com.bazik1337.ios27animsreborn",
+  "https://t.me/bazik1337",
+  "https://t.me/ba31k_tweaks",
+  "https://github.com/ba31k/ios26-27-anims",
+  "plist",
+  "Root",
+  "action",
+  "iOS 27 Animations Reborn",
+  "by bazik1337",
+  "Restore recommended settings?",
+  "Restore the recommended options and keep the tweak enabled state.",
+  "Cancel",
+  "Reset",
+  "v16@?0@\"UIAlertAction\"8",
+  "Enabled",
+  "PromptStage",
+  "com.bazik1337.ios27animsreborn/changed",
+  "/var/jb/usr/bin/sbreload",
+  "/usr/bin/sbreload",
+  "/var/jb/usr/bin/killall",
+  "/usr/bin/killall",
+  "killall",
+  "SpringBoard",
+  "com.bazik1337.ios27animsreborn.prefs",
+  "CFBundleShortVersionString",
+  "iconSymbol",
+  "iconImage",
+  "footerText",
+  "version",
+  "iOS 27 Animations Reborn %@",
+  "v16@?0@\"UIGraphicsImageRendererContext\"8",
+  "bundleForClass:",
+  "actionWithTitle:style:handler:",
+  "setFill",
+  "addSubview:",
+  "viewWillAppear:",
+  "URLWithString:",
+  "propertyForKey:",
+  "addAction:",
+  "setOnTintColor:",
+  "alertControllerWithTitle:message:preferredStyle:",
+  "appearanceWhenContainedInInstancesOfClasses:",
+  "arrayWithObjects:count:",
+  "bezierPathWithRoundedRect:cornerRadius:",
+  "bottomAnchor",
+  "bundleWithIdentifier:",
+  "centerXAnchor",
+  "colorWithRed:green:blue:alpha:",
+  "configurationWithPointSize:weight:",
+  "constraintEqualToAnchor:",
+  "constraintEqualToAnchor:constant:",
+  "countByEnumeratingWithState:objects:count:",
+  "drawInRect:",
+  "fileSystemRepresentation",
+  "fill",
+  "hasSuffix:",
+  "imageWithActions:",
+  "imageWithTintColor:renderingMode:",
+  "infoDictionary",
+  "initWithFrame:",
+  "initWithSize:",
+  "isEqual:",
+  "isEqualToString:",
+  "loadSpecifiersFromPlistName:target:bundle:",
+  "localizedStringForKey:value:table:",
+  "mutableCopy",
+  "navigationBar",
+  "navigationController",
+  "objectForKeyedSubscript:",
+  "open:",
+  "openChannel",
+  "openGitHub",
+  "openTelegram",
+  "openURL:options:completionHandler:",
+  "performReset",
+  "presentViewController:animated:completion:",
+  "reloadSpecifiers",
+  "resetSettings",
+  "respring",
+  "secondaryLabelColor",
+  "setActive:",
+  "setFont:",
+  "setProperty:forKey:",
+  "setTableHeaderView:",
+  "setText:",
+  "setTextColor:",
+  "setTintColor:",
+  "setTranslatesAutoresizingMaskIntoConstraints:",
+  "sharedApplication",
+  "size",
+  "specifier",
+  "specifiers",
+  "stringWithFormat:",
+  "systemFontOfSize:weight:",
+  "systemImageNamed:withConfiguration:",
+  "table",
+  "tableView:cellForRowAtIndexPath:",
+  "textLabel",
+  "topAnchor",
+  "view",
+  "viewDidLoad",
+  "viewWillDisappear:",
+  "whiteColor",
+  "CG27RebornPageController",
+  "CG27RebornRootListController",
+  "CG27RebornAboutController",
+  "@16@0:8",
+  "v16@0:8",
+  "v20@0:8B16",
+  "@32@0:8@16@24",
+  "v24@0:8@16"
+ ],
+ "cfstrings": []
+}
